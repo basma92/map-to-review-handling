@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <!-- styles put here, but you can include a CSS file and reference it instead! -->
+     <title>map project</title>
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+          <link href="css/style.css" rel="stylesheet">
+ </head>       
+     <body>
+     <div class= "container">
+         
+     <aside class="listedloc col-md-3">
+
+         <div id="input">
+             <input type="search" class="form-control inputt" placeholder="Search Places" data-bind="textInput: query">
+             </div>
+            <ul data-bind="foreach: filteredArray">
+               
+            <li data-bind="text:title, click:$root.clickHandler"></li>
+         </ul>
+
+         <h3 id="error"></h3>
+         </aside>
+     <main id="map" class="col-md-9"></main>
+     </div>
+             <script src="js/jquery-3.2.1.min.js"> </script>
+         <script src="js/knockout.js"></script>
+         <script src="js/app.js"></script>
+         <script 
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT6Z_KyS7TLofTNeg0t1pOsfsBmXwUThY&v=3&callback=initMap" async defer onerror="mapError()">
+   </script>
+ </body>
+</html>
